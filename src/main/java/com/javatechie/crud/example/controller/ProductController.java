@@ -18,7 +18,10 @@ public class ProductController {
         return "Hello World";
     }
 
-   
+    @GetMapping("/health")
+    public String healthCheck() {
+        return "Service is up!";
+    }
 
     @PostMapping("/addProduct")
     public Product addProduct(@RequestBody Product product) {
